@@ -1,0 +1,33 @@
+{
+  "name": "retiro-site",
+  "version": "1.0.0",
+  "description": "Site elegante para o retiro 'Além do Espelho - Edição Gênesis: O Confronto'",
+  "main": "index.html",
+  "scripts": {
+    "dev": "http-server -p 8000 -c-1",
+    "build": "echo 'Para build otimizado, considere usar Webpack ou Vite'",
+    "serve": "python3 -m http.server 8000"
+  },
+  "keywords": [
+    "retiro",
+    "espiritualidade",
+    "transformação",
+    "identidade",
+    "propósito"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "http-server": "^14.1.0"
+  },
+  "dependencies": {
+    "aos": "^2.3.1",
+    "tailwindcss": "^3.0.0"
+  },
+  "notes": {
+    "frontend": "HTML5, CSS3, JavaScript vanilla com Tailwind CSS via CDN",
+    "backend": "Recomendações para quando integrar com backend",
+    "database": "Pendente - será adicionado conforme necessário",
+    "hosting": "Netlify, Vercel, GitHub Pages ou servidor próprio"
+  }
+}
