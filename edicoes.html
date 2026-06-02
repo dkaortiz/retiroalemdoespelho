@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edições - Além do Espelho</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- AOS - Animate On Scroll -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Custom Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Raleway:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-black text-white font-raleway overflow-x-hidden">
+    
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 bg-black/80 backdrop-blur-md border-b border-yellow-900/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-playfair font-bold bg-gradient-to-r from-yellow-300 to-yellow-600 bg-clip-text text-transparent">
+                ALÉM DO ESPELHO
+            </a>
+            <ul class="hidden md:flex space-x-8">
+                <li><a href="index.html#inicio" class="hover:text-yellow-300 transition">Início</a></li>
+                <li><a href="index.html#sobre" class="hover:text-yellow-300 transition">Sobre</a></li>
+                <li><a href="edicoes.html" class="text-yellow-300 transition">Edições</a></li>
+                <li><a href="inscricao.html" class="hover:text-yellow-300 transition">Inscrição</a></li>
+            </ul>
+            <button class="md:hidden text-yellow-300" id="menuToggle">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="hidden fixed top-16 w-full bg-black/95 backdrop-blur-md z-40 md:hidden">
+        <div class="px-4 py-4 space-y-3">
+            <a href="index.html#inicio" class="block py-2 hover:text-yellow-300 transition">Início</a>
+            <a href="index.html#sobre" class="block py-2 hover:text-yellow-300 transition">Sobre</a>
+            <a href="edicoes.html" class="block py-2 text-yellow-300 transition">Edições</a>
+            <a href="inscricao.html" class="block py-2 hover:text-yellow-300 transition">Inscrição</a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
+        <!-- Premium Background -->
+        <div class="absolute inset-0 z-0">
+            <div class="absolute inset-0 bg-gradient-to-b from-slate-950 via-black to-slate-900"></div>
+            <div class="absolute top-0 left-1/3 w-96 h-96 bg-yellow-600/15 rounded-full mix-blend-screen filter blur-3xl animate-float"></div>
+            <div class="absolute top-1/4 right-1/4 w-80 h-80 bg-yellow-500/10 rounded-full mix-blend-screen filter blur-3xl animate-blob animation-delay-2000"></div>
+            <div class="absolute inset-0 opacity-5 bg-grid" style="background-image: url('data:image/svg+xml,%3Csvg width=%2760%27 height=%2760%27 viewBox=%270 0 60 60%27 xmlns=%27http://www.w3.org/2000/svg%27%3E%3Cg fill=%27none%27 fill-rule=%27evenodd%27%3E%3Cg fill=%27%23ffffff%27 fill-opacity=%270.1%27%3E%3Cpath d=%27M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z%27/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');"></div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12 text-center">
+            <div data-aos="fade-up" data-aos-duration="1200">
+                <!-- Badge -->
+                <div class="inline-block mb-6">
+                    <span class="px-4 py-2 bg-gradient-to-r from-yellow-600/30 to-yellow-700/20 border border-yellow-500/50 rounded-full text-yellow-300 text-xs md:text-sm font-semibold tracking-widest uppercase backdrop-blur-sm hover-glow">
+                        ✨ TODAS AS EDIÇÕES
+                    </span>
+                </div>
+
+                <!-- Main Heading -->
+                <h1 class="font-playfair text-5xl md:text-7xl font-bold leading-tight mb-6">
+                    <span class="block text-white drop-shadow-lg">As Edições</span>
+                    <span class="block bg-gradient-to-r from-yellow-200 via-yellow-400 to-yellow-600 bg-clip-text text-transparent drop-shadow-lg">do Retiro</span>
+                </h1>
+
+                <!-- Subtitle -->
+                <p class="text-xl md:text-2xl text-yellow-100 font-playfair italic font-light mb-6">
+                    "Cada edição é um novo convite para transformação profunda"
+                </p>
+
+                <p class="text-gray-300 text-lg max-w-2xl mx-auto">
+                    Conheça as edições do retiro "Além do Espelho" e escolha a que mais ressoa com você neste momento.
+                </p>
+            </div>
+
+            <!-- Scroll Indicator -->
+            <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce" data-aos="fade-up" data-aos-delay="600">
+                <svg class="w-8 h-8 text-yellow-400 opacity-70 animate-float" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                </svg>
+            </div>
+        </div>
+    </section>
+
+    <!-- Edições Section -->
+    <section class="py-24 md:py-40 relative overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <div class="absolute inset-0 bg-gradient-to-b from-black via-slate-950 to-black"></div>
+            <div class="absolute top-1/4 right-0 w-96 h-96 bg-yellow-700/10 rounded-full mix-blend-screen filter blur-3xl"></div>
+            <div class="absolute bottom-1/4 left-0 w-96 h-96 bg-yellow-600/8 rounded-full mix-blend-multiply filter blur-3xl animate-float"></div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <!-- Current Edition -->
+            <div class="mb-24" data-aos="fade-up">
+                <div class="inline-block mb-6">
+                    <span class="px-4 py-2 bg-gradient-to-r from-red-600/20 to-yellow-700/20 border border-red-500/30 rounded-full text-red-300 text-xs font-semibold tracking-widest uppercase backdrop-blur-sm">
+                        🔴 EDIÇÃO ATUAL
+                    </span>
+                </div>
+                
+                <h2 class="font-playfair text-5xl md:text-6xl font-bold mb-8 leading-tight">
+                    <span class="block text-white mb-3">1ª Edição:</span>
+                    <span class="block bg-gradient-to-r from-red-300 via-yellow-300 to-yellow-600 bg-clip-text text-transparent">O Confronto</span>
+                </h2>
+
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <!-- Left - Content -->
+                    <div data-aos="fade-right">
+                        <p class="text-gray-300 text-lg leading-relaxed mb-6">
+                            A primeira edição do retiro "Além do Espelho" convida você a um encontro profundo com a verdade. Em "O Confronto", você será desafiado a:
+                        </p>
+
+                        <div class="space-y-4 mb-8">
+                            <div class="flex items-start gap-4 group">
+                                <div class="w-2 h-2 rounded-full bg-gradient-to-b from-red-400 to-red-600 mt-3 flex-shrink-0 group-hover:scale-150 transition"></div>
+                                <div>
+                                    <p class="text-red-300 font-semibold mb-1">Confrontar Verdades Incômodas</p>
+                                    <p class="text-gray-400 text-sm">Enfrente os aspectos de si mesmo que prefere ignorar</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start gap-4 group">
+                                <div class="w-2 h-2 rounded-full bg-gradient-to-b from-red-400 to-red-600 mt-3 flex-shrink-0 group-hover:scale-150 transition"></div>
+                                <div>
+                                    <p class="text-red-300 font-semibold mb-1">Quebrar Máscaras</p>
+                                    <p class="text-gray-400 text-sm">Deixe cair as personas que você criou para o mundo</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start gap-4 group">
+                                <div class="w-2 h-2 rounded-full bg-gradient-to-b from-red-400 to-red-600 mt-3 flex-shrink-0 group-hover:scale-150 transition"></div>
+                                <div>
+                                    <p class="text-red-300 font-semibold mb-1">Encontrar Autenticidade</p>
+                                    <p class="text-gray-400 text-sm">Descubra quem você realmente é além das aparências</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start gap-4 group">
+                                <div class="w-2 h-2 rounded-full bg-gradient-to-b from-red-400 to-red-600 mt-3 flex-shrink-0 group-hover:scale-150 transition"></div>
+                                <div>
+                                    <p class="text-red-300 font-semibold mb-1">Conectar com Deus</p>
+                                    <p class="text-gray-400 text-sm">Estabeleça um relacionamento genuíno com seu criador</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <a href="inscricao.html" class="inline-block group relative px-8 py-4 bg-gradient-to-r from-red-500 to-yellow-500 text-white font-bold rounded-lg overflow-hidden transition-all duration-300 hover:shadow-2xl hover:shadow-red-500/50 transform hover:scale-105">
+                            <span class="relative z-10">Inscrever-se Agora</span>
+                            <div class="absolute inset-0 bg-white/20 transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
+                        </a>
+
+                        <p class="text-yellow-300 text-sm mt-4 italic">
+                            Data: Em breve • Local: A confirmar
+                        </p>
+                    </div>
+
+                    <!-- Right - Visual -->
+                    <div data-aos="fade-left" class="relative h-96">
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <div class="absolute -inset-4 bg-gradient-to-b from-red-600/30 to-yellow-600/10 rounded-2xl blur-3xl animate-pulse"></div>
+                            <div class="relative w-full h-full bg-gradient-to-br from-slate-900/40 to-black border-2 border-red-600/50 rounded-2xl p-8 backdrop-blur-sm overflow-hidden flex flex-col justify-center items-center text-center">
+                                <div class="text-7xl mb-6 animate-float">💔</div>
+                                <h3 class="font-playfair text-3xl font-bold text-red-300 mb-4">O Confronto</h3>
+                                <p class="text-gray-300 text-base leading-relaxed">
+                                    "Antes do propósito, existe o confronto. É nele que nos encontramos com a verdade e conosco mesmos."
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- The 6 Pillars of This Edition -->
+            <div class="mb-24" data-aos="fade-up">
+                <h3 class="font-playfair text-4xl md:text-5xl font-bold mb-12 text-center">
+                    <span class="bg-gradient-to-r from-red-300 to-yellow-400 bg-clip-text text-transparent">Os 6 Pilares do Confronto</span>
+                </h3>
+
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 md:gap-6">
+                    <div class="group relative card-hover" data-aos="zoom-in">
+                        <div class="absolute -inset-0.5 bg-gradient-to-r from-red-600 to-violet-500 rounded-2xl blur opacity-0 group-hover:opacity-100 transition duration-500"></div>
+                        <div class="relative bg-black p-6 rounded-2xl border border-red-700/50 h-full flex flex-col items-center justify-center text-center transform group-hover:scale-105 transition-all duration-300">
+                            <div class="text-5xl mb-3 transform group-hover:scale-125 transition duration-300">💔</div>
+                            <h4 class="font-playfair font-bold text-lg mb-2 text-red-200">Confronto</h4>
+                            <p class="text-xs text-gray-400">com a verdade</p>
+                        </div>
+                    </div>
+
+                    <div class="group relative card-hover" data-aos="zoom-in" data-aos-delay="100">
+                        <div class="absolute -inset-0.5 bg-gradient-to-r from-cyan-600 to-yellow-600 rounded-2xl blur opacity-0 group-hover:opacity-100 transition duration-500"></div>
+                        <div class="relative bg-black p-6 rounded-2xl border border-red-700/50 h-full flex flex-col items-center justify-center text-center transform group-hover:scale-105 transition-all duration-300">
+                            <div class="text-5xl mb-3 transform group-hover:scale-125 transition duration-300">🎭</div>
+                            <h4 class="font-playfair font-bold text-lg mb-2 text-red-200">Quebra</h4>
+                            <p class="text-xs text-gray-400">de máscaras</p>
+                        </div>
+                    </div>
+
+                    <div class="group relative card-hover" data-aos="zoom-in" data-aos-delay="200">
+                        <div class="absolute -inset-0.5 bg-gradient-to-r from-yellow-600 to-violet-600 rounded-2xl blur opacity-0 group-hover:opacity-100 transition duration-500"></div>
+                        <div class="relative bg-black p-6 rounded-2xl border border-red-700/50 h-full flex flex-col items-center justify-center text-center transform group-hover:scale-105 transition-all duration-300">
+                            <div class="text-5xl mb-3 transform group-hover:scale-125 transition duration-300">🪞</div>
+                            <h4 class="font-playfair font-bold text-lg mb-2 text-red-200">Encontro</h4>
+                            <p class="text-xs text-gray-400">comigo mesmo</p>
+                        </div>
+                    </div>
+
+                    <div class="group relative card-hover" data-aos="zoom-in" data-aos-delay="300">
+                        <div class="absolute -inset-0.5 bg-gradient-to-r from-yellow-500 to-violet-400 rounded-2xl blur opacity-0 group-hover:opacity-100 transition duration-500"></div>
+                        <div class="relative bg-black p-6 rounded-2xl border border-red-700/50 h-full flex flex-col items-center justify-center text-center transform group-hover:scale-105 transition-all duration-300">
+                            <div class="text-5xl mb-3 transform group-hover:scale-125 transition duration-300">✝️</div>
+                            <h4 class="font-playfair font-bold text-lg mb-2 text-red-200">Encontro</h4>
+                            <p class="text-xs text-gray-400">com Deus</p>
+                        </div>
+                    </div>
+
+                    <div class="group relative card-hover" data-aos="zoom-in" data-aos-delay="400">
+                        <div class="absolute -inset-0.5 bg-gradient-to-r from-red-500 to-rose-500 rounded-2xl blur opacity-0 group-hover:opacity-100 transition duration-500"></div>
+                        <div class="relative bg-black p-6 rounded-2xl border border-red-700/50 h-full flex flex-col items-center justify-center text-center transform group-hover:scale-105 transition-all duration-300">
+                            <div class="text-5xl mb-3 transform group-hover:scale-125 transition duration-300">❤️</div>
+                            <h4 class="font-playfair font-bold text-lg mb-2 text-red-200">Cura</h4>
+                            <p class="text-xs text-gray-400">e restauração</p>
+                        </div>
+                    </div>
+
+                    <div class="group relative card-hover" data-aos="zoom-in" data-aos-delay="500">
+                        <div class="absolute -inset-0.5 bg-gradient-to-r from-yellow-400 to-yellow-500 rounded-2xl blur opacity-0 group-hover:opacity-100 transition duration-500"></div>
+                        <div class="relative bg-black p-6 rounded-2xl border border-red-700/50 h-full flex flex-col items-center justify-center text-center transform group-hover:scale-105 transition-all duration-300">
+                            <div class="text-5xl mb-3 transform group-hover:scale-125 transition duration-300">👑</div>
+                            <h4 class="font-playfair font-bold text-lg mb-2 text-red-200">Identidade</h4>
+                            <p class="text-xs text-gray-400">e propósito</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Next Editions Coming -->
+            <div class="relative" data-aos="fade-up">
+                <div class="absolute -inset-1 bg-gradient-to-r from-yellow-600/20 to-yellow-700/10 rounded-2xl blur"></div>
+                <div class="relative bg-gradient-to-br from-slate-900/40 to-black border-2 border-yellow-600/30 rounded-2xl p-8 md:p-12 text-center">
+                    <h3 class="font-playfair text-3xl md:text-4xl font-bold mb-4">
+                        <span class="text-yellow-200">Próximas Edições em Breve</span>
+                    </h3>
+                    <p class="text-gray-300 text-lg max-w-2xl mx-auto mb-6">
+                        Novas edições do retiro "Além do Espelho" estão sendo preparadas com temas transformadores. Fique atento para descobrir o tema da próxima edição!
+                    </p>
+                    <p class="text-yellow-300 font-semibold">
+                        2ª Edição: Em Desenvolvimento
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-24 md:py-40 relative overflow-hidden">
+        <div class="absolute inset-0">
+            <div class="absolute inset-0 bg-gradient-to-b from-black via-slate-950 to-black"></div>
+            <div class="absolute top-0 left-1/2 w-96 h-96 bg-yellow-600/20 rounded-full mix-blend-screen filter blur-3xl -translate-x-1/2 animate-pulse"></div>
+            <div class="absolute bottom-0 right-1/4 w-96 h-96 bg-yellow-500/15 rounded-full mix-blend-screen filter blur-3xl animate-float"></div>
+        </div>
+        
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            <div class="relative" data-aos="zoom-in" data-aos-duration="1000">
+                <div class="absolute -inset-1 bg-gradient-to-r from-yellow-600 via-yellow-500 to-yellow-600 rounded-2xl blur-2xl opacity-40 animate-pulse"></div>
+                
+                <div class="relative bg-gradient-to-br from-slate-900 via-black to-slate-950 border-2 border-yellow-500/50 rounded-2xl p-8 md:p-16 backdrop-blur-xl">
+                    <h2 class="font-playfair text-4xl md:text-5xl font-bold mb-4">
+                        <span class="block text-white mb-2">Escolha sua Edição</span>
+                        <span class="block bg-gradient-to-r from-yellow-300 to-yellow-600 bg-clip-text text-transparent">e Comece a Jornada</span>
+                    </h2>
+                    
+                    <p class="text-gray-300 text-lg md:text-xl mb-8">
+                        Inscreva-se agora na 1ª Edição: O Confronto e comece sua transformação
+                    </p>
+                    
+                    <a href="inscricao.html" class="inline-block group relative">
+                        <div class="absolute -inset-1 bg-gradient-to-r from-yellow-400 to-violet-500 rounded-lg blur opacity-75 group-hover:opacity-100 transition duration-500 group-hover:blur-md"></div>
+                        <div class="relative px-8 py-4 bg-gradient-to-r from-yellow-400 to-violet-500 text-black font-bold rounded-lg flex items-center justify-center gap-2 transition-all duration-300 group-hover:scale-105">
+                            <span>Ir para Inscrição</span>
+                            <span class="group-hover:translate-x-1 transition-transform">→</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black border-t border-yellow-900/20 py-12 relative z-20">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-3 gap-12 mb-12">
+                <div>
+                    <div class="text-2xl font-playfair font-bold bg-gradient-to-r from-yellow-300 to-yellow-600 bg-clip-text text-transparent mb-4">
+                        ALÉM DO ESPELHO
+                    </div>
+                    <p class="text-gray-400">
+                        Uma jornada de cura, identidade e propósito através de edições transformadoras.
+                    </p>
+                </div>
+                <div>
+                    <h3 class="font-bold text-yellow-300 mb-4">Links</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="index.html#sobre" class="hover:text-yellow-300 transition">Sobre</a></li>
+                        <li><a href="edicoes.html" class="hover:text-yellow-300 transition">Edições</a></li>
+                        <li><a href="inscricao.html" class="hover:text-yellow-300 transition">Inscrição</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-bold text-yellow-300 mb-4">Contato</h3>
+                    <p class="text-gray-400 mb-2">Email: contato@alemdoespelho.com</p>
+                    <p class="text-gray-400">Redes Sociais: @alemdoespelho</p>
+                </div>
+            </div>
+            <div class="border-t border-yellow-900/20 pt-8 text-center text-gray-500 text-sm">
+                <p>&copy; 2025 Além do Espelho - Edições. Todos os direitos reservados. ✨</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- AOS Script -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Custom JavaScript -->
+    <script src="js/main.js"></script>
+</body>
+</html>

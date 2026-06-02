@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscrição - Além do Espelho</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- AOS - Animate On Scroll -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Custom Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Raleway:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-black text-white font-raleway overflow-x-hidden">
+    
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 bg-black/80 backdrop-blur-md border-b border-yellow-900/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-playfair font-bold bg-gradient-to-r from-yellow-300 to-yellow-600 bg-clip-text text-transparent">
+                ALÉM DO ESPELHO
+            </a>
+            <ul class="hidden md:flex space-x-8">
+                <li><a href="index.html#inicio" class="hover:text-yellow-300 transition">Início</a></li>
+                <li><a href="index.html#sobre" class="hover:text-yellow-300 transition">Sobre</a></li>
+                <li><a href="edicoes.html" class="hover:text-yellow-300 transition">Edições</a></li>
+                <li><a href="inscricao.html" class="text-yellow-300 transition">Inscrição</a></li>
+            </ul>
+            <button class="md:hidden text-yellow-300" id="menuToggle">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="hidden fixed top-16 w-full bg-black/95 backdrop-blur-md z-40 md:hidden">
+        <div class="px-4 py-4 space-y-3">
+            <a href="index.html#inicio" class="block py-2 hover:text-yellow-300 transition">Início</a>
+            <a href="index.html#sobre" class="block py-2 hover:text-yellow-300 transition">Sobre</a>
+            <a href="edicoes.html" class="block py-2 hover:text-yellow-300 transition">Edições</a>
+            <a href="inscricao.html" class="block py-2 text-yellow-300 transition">Inscrição</a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
+        <!-- Premium Background -->
+        <div class="absolute inset-0 z-0">
+            <div class="absolute inset-0 bg-gradient-to-b from-slate-950 via-black to-slate-900"></div>
+            <div class="absolute top-0 left-1/3 w-96 h-96 bg-yellow-600/15 rounded-full mix-blend-screen filter blur-3xl animate-float"></div>
+            <div class="absolute top-1/4 right-1/4 w-80 h-80 bg-yellow-500/10 rounded-full mix-blend-screen filter blur-3xl animate-blob animation-delay-2000"></div>
+            <div class="absolute inset-0 opacity-5 bg-grid" style="background-image: url('data:image/svg+xml,%3Csvg width=%2760%27 height=%2760%27 viewBox=%270 0 60 60%27 xmlns=%27http://www.w3.org/2000/svg%27%3E%3Cg fill=%27none%27 fill-rule=%27evenodd%27%3E%3Cg fill=%27%23ffffff%27 fill-opacity=%270.1%27%3E%3Cpath d=%27M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z%27/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');"></div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12 text-center">
+            <div data-aos="fade-up" data-aos-duration="1200">
+                <!-- Badge -->
+                <div class="inline-block mb-6">
+                    <span class="px-4 py-2 bg-gradient-to-r from-yellow-600/30 to-yellow-700/20 border border-yellow-500/50 rounded-full text-yellow-300 text-xs md:text-sm font-semibold tracking-widest uppercase backdrop-blur-sm hover-glow">
+                        📝 ESCOLHA SUA PARTICIPAÇÃO
+                    </span>
+                </div>
+
+                <!-- Main Heading -->
+                <h1 class="font-playfair text-5xl md:text-7xl font-bold leading-tight mb-6">
+                    <span class="block text-white drop-shadow-lg">Inscrição para</span>
+                    <span class="block bg-gradient-to-r from-yellow-200 via-yellow-400 to-yellow-600 bg-clip-text text-transparent drop-shadow-lg">O Confronto</span>
+                </h1>
+
+                <!-- Subtitle -->
+                <p class="text-xl md:text-2xl text-yellow-100 font-playfair italic font-light mb-6">
+                    "Escolha como você quer participar dessa transformação"
+                </p>
+
+                <p class="text-gray-300 text-lg max-w-2xl mx-auto">
+                    Antes de se inscrever, escolha o tipo de participação que mais combina com você neste momento da sua jornada.
+                </p>
+            </div>
+
+            <!-- Scroll Indicator -->
+            <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce" data-aos="fade-up" data-aos-delay="600">
+                <svg class="w-8 h-8 text-yellow-400 opacity-70 animate-float" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                </svg>
+            </div>
+        </div>
+    </section>
+
+    <!-- Types Section -->
+    <section class="py-24 md:py-40 relative overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <div class="absolute inset-0 bg-gradient-to-b from-black via-slate-950 to-black"></div>
+            <div class="absolute top-1/4 right-0 w-96 h-96 bg-yellow-700/10 rounded-full mix-blend-screen filter blur-3xl"></div>
+            <div class="absolute bottom-1/4 left-0 w-96 h-96 bg-yellow-600/8 rounded-full mix-blend-multiply filter blur-3xl animate-float"></div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <!-- Section Header -->
+            <div class="text-center mb-20" data-aos="fade-up">
+                <h2 class="font-playfair text-5xl md:text-6xl font-bold mb-6 leading-tight">
+                    <span class="block text-white mb-3">Escolha seu</span>
+                    <span class="block bg-gradient-to-r from-yellow-300 to-yellow-600 bg-clip-text text-transparent">Tipo de Participação</span>
+                </h2>
+                <p class="text-gray-400 text-lg md:text-xl max-w-3xl mx-auto">
+                    Temos dois tipos de participação. Conheça cada um e escolha o que melhor se adequa a você.
+                </p>
+            </div>
+
+            <!-- Two Types Grid -->
+            <div class="grid md:grid-cols-2 gap-8 mb-16">
+                
+                <!-- ACAPANTES -->
+                <div class="group" data-aos="fade-right">
+                    <div class="relative h-full">
+                        <!-- Glow Effect -->
+                        <div class="absolute -inset-1 bg-gradient-to-r from-blue-600 to-cyan-500 rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition duration-500"></div>
+                        
+                        <!-- Card -->
+                        <div class="relative bg-gradient-to-br from-slate-900/60 to-black border-2 border-blue-600/50 rounded-3xl p-8 md:p-12 backdrop-blur-sm overflow-hidden h-full flex flex-col">
+                            <!-- Background Elements -->
+                            <div class="absolute top-0 right-0 w-40 h-40 bg-blue-500/10 rounded-full blur-3xl -z-10"></div>
+                            <div class="absolute bottom-0 left-0 w-40 h-40 bg-cyan-500/10 rounded-full blur-3xl -z-10"></div>
+
+                            <!-- Icon -->
+                            <div class="text-6xl mb-6 animate-float">🎓</div>
+
+                            <!-- Title -->
+                            <h3 class="font-playfair text-4xl font-bold mb-2 text-blue-300">
+                                Acapantes
+                            </h3>
+
+                            <!-- Subtitle -->
+                            <p class="text-blue-200 text-lg font-semibold mb-6">
+                                Aprendizado Profundo
+                            </p>
+
+                            <!-- Description -->
+                            <p class="text-gray-300 mb-8 flex-grow">
+                                Para aqueles que desejam mergulhar completamente na experiência do retiro. Você participará de todas as atividades, reflexões e sessões de transformação.
+                            </p>
+
+                            <!-- Features -->
+                            <div class="space-y-3 mb-8">
+                                <div class="flex items-start gap-3">
+                                    <div class="w-5 h-5 rounded-full bg-blue-500 flex items-center justify-center flex-shrink-0 mt-1">
+                                        <span class="text-white text-xs">✓</span>
+                                    </div>
+                                    <span class="text-gray-300">Acesso a todas as sessões</span>
+                                </div>
+                                <div class="flex items-start gap-3">
+                                    <div class="w-5 h-5 rounded-full bg-blue-500 flex items-center justify-center flex-shrink-0 mt-1">
+                                        <span class="text-white text-xs">✓</span>
+                                    </div>
+                                    <span class="text-gray-300">Participação em dinâmicas em grupo</span>
+                                </div>
+                                <div class="flex items-start gap-3">
+                                    <div class="w-5 h-5 rounded-full bg-blue-500 flex items-center justify-center flex-shrink-0 mt-1">
+                                        <span class="text-white text-xs">✓</span>
+                                    </div>
+                                    <span class="text-gray-300">Acompanhamento personalizado</span>
+                                </div>
+                                <div class="flex items-start gap-3">
+                                    <div class="w-5 h-5 rounded-full bg-blue-500 flex items-center justify-center flex-shrink-0 mt-1">
+                                        <span class="text-white text-xs">✓</span>
+                                    </div>
+                                    <span class="text-gray-300">Certificado de participação</span>
+                                </div>
+                                <div class="flex items-start gap-3">
+                                    <div class="w-5 h-5 rounded-full bg-blue-500 flex items-center justify-center flex-shrink-0 mt-1">
+                                        <span class="text-white text-xs">✓</span>
+                                    </div>
+                                    <span class="text-gray-300">Comunidade exclusiva pós-retiro</span>
+                                </div>
+                            </div>
+
+                            <!-- Price/Info -->
+                            <p class="text-blue-300 text-sm mb-6 italic">
+                                Melhor para quem quer transformação completa
+                            </p>
+
+                            <!-- Button -->
+                            <button onclick="selectType('acapante')" class="w-full group relative px-6 py-4 bg-gradient-to-r from-blue-600 to-cyan-500 text-white font-bold rounded-xl overflow-hidden transition-all duration-300 hover:shadow-2xl hover:shadow-blue-500/50 transform hover:scale-105">
+                                <span class="relative z-10">Escolher Acapante</span>
+                                <div class="absolute inset-0 bg-white/20 transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- EQUIPANTES -->
+                <div class="group" data-aos="fade-left">
+                    <div class="relative h-full">
+                        <!-- Glow Effect -->
+                        <div class="absolute -inset-1 bg-gradient-to-r from-purple-600 to-pink-500 rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition duration-500"></div>
+                        
+                        <!-- Card -->
+                        <div class="relative bg-gradient-to-br from-slate-900/60 to-black border-2 border-purple-600/50 rounded-3xl p-8 md:p-12 backdrop-blur-sm overflow-hidden h-full flex flex-col">
+                            <!-- Background Elements -->
+                            <div class="absolute top-0 right-0 w-40 h-40 bg-purple-500/10 rounded-full blur-3xl -z-10"></div>
+                            <div class="absolute bottom-0 left-0 w-40 h-40 bg-pink-500/10 rounded-full blur-3xl -z-10"></div>
+
+                            <!-- Icon -->
+                            <div class="text-6xl mb-6 animate-float">🤝</div>
+
+                            <!-- Title -->
+                            <h3 class="font-playfair text-4xl font-bold mb-2 text-purple-300">
+                                Equipantes
+                            </h3>
+
+                            <!-- Subtitle -->
+                            <p class="text-purple-200 text-lg font-semibold mb-6">
+                                Apoio e Suporte
+                            </p>
+
+                            <!-- Description -->
+                            <p class="text-gray-300 mb-8 flex-grow">
+                                Para aqueles que desejam apoiar e equipar outros participantes na sua jornada de transformação. Você será responsável por acolher, acompanhar e orientar os participantes.
+                            </p>
+
+                            <!-- Features -->
+                            <div class="space-y-3 mb-8">
+                                <div class="flex items-start gap-3">
+                                    <div class="w-5 h-5 rounded-full bg-purple-500 flex items-center justify-center flex-shrink-0 mt-1">
+                                        <span class="text-white text-xs">✓</span>
+                                    </div>
+                                    <span class="text-gray-300">Treinamento prévio</span>
+                                </div>
+                                <div class="flex items-start gap-3">
+                                    <div class="w-5 h-5 rounded-full bg-purple-500 flex items-center justify-center flex-shrink-0 mt-1">
+                                        <span class="text-white text-xs">✓</span>
+                                    </div>
+                                    <span class="text-gray-300">Acompanhamento de pequenos grupos</span>
+                                </div>
+                                <div class="flex items-start gap-3">
+                                    <div class="w-5 h-5 rounded-full bg-purple-500 flex items-center justify-center flex-shrink-0 mt-1">
+                                        <span class="text-white text-xs">✓</span>
+                                    </div>
+                                    <span class="text-gray-300">Suporte emocional qualificado</span>
+                                </div>
+                                <div class="flex items-start gap-3">
+                                    <div class="w-5 h-5 rounded-full bg-purple-500 flex items-center justify-center flex-shrink-0 mt-1">
+                                        <span class="text-white text-xs">✓</span>
+                                    </div>
+                                    <span class="text-gray-300">Experiência transformadora compartilhada</span>
+                                </div>
+                                <div class="flex items-start gap-3">
+                                    <div class="w-5 h-5 rounded-full bg-purple-500 flex items-center justify-center flex-shrink-0 mt-1">
+                                        <span class="text-white text-xs">✓</span>
+                                    </div>
+                                    <span class="text-gray-300">Reconhecimento especial</span>
+                                </div>
+                            </div>
+
+                            <!-- Info -->
+                            <p class="text-purple-300 text-sm mb-6 italic">
+                                Melhor para quem quer impactar outras vidas
+                            </p>
+
+                            <!-- Button -->
+                            <button onclick="selectType('equipante')" class="w-full group relative px-6 py-4 bg-gradient-to-r from-purple-600 to-pink-500 text-white font-bold rounded-xl overflow-hidden transition-all duration-300 hover:shadow-2xl hover:shadow-purple-500/50 transform hover:scale-105">
+                                <span class="relative z-10">Escolher Equipante</span>
+                                <div class="absolute inset-0 bg-white/20 transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Selection Info -->
+            <div class="bg-gradient-to-r from-yellow-950/40 to-black border-l-4 border-yellow-500 p-6 md:p-8 rounded-lg backdrop-blur-sm" data-aos="fade-up">
+                <p class="text-yellow-100 text-base md:text-lg">
+                    <span class="font-bold text-yellow-300">Não sabe o que escolher?</span> Ambos os tipos são transformadores e oferecem uma experiência profunda. Escolha aquele que mais ressoa com seu coração neste momento. Você pode sempre conversar conosco sobre qual é o melhor para você.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Registration Form Section -->
+    <section class="py-24 md:py-40 relative overflow-hidden" id="formulario">
+        <div class="absolute inset-0">
+            <div class="absolute inset-0 bg-gradient-to-b from-black via-slate-950 to-black"></div>
+            <div class="absolute top-0 left-1/2 w-96 h-96 bg-yellow-600/20 rounded-full mix-blend-screen filter blur-3xl -translate-x-1/2 animate-pulse"></div>
+            <div class="absolute bottom-0 right-1/4 w-96 h-96 bg-yellow-500/15 rounded-full mix-blend-screen filter blur-3xl animate-float"></div>
+        </div>
+        
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <!-- Form Container -->
+            <div class="relative" data-aos="zoom-in" data-aos-duration="1000">
+                <div class="absolute -inset-1 bg-gradient-to-r from-yellow-600 via-yellow-500 to-yellow-600 rounded-2xl blur-2xl opacity-40 animate-pulse"></div>
+                
+                <div class="relative bg-gradient-to-br from-slate-900 via-black to-slate-950 border-2 border-yellow-500/50 rounded-2xl p-8 md:p-16 backdrop-blur-xl">
+                    
+                    <div class="relative z-20">
+                        <h2 class="font-playfair text-4xl md:text-5xl font-bold mb-2 leading-tight">
+                            <span class="block text-white">Finalize sua</span>
+                            <span class="block bg-gradient-to-r from-yellow-300 to-yellow-600 bg-clip-text text-transparent">Inscrição</span>
+                        </h2>
+                        
+                        <p class="text-gray-400 text-sm mb-8">
+                            <span id="tipoSelecionado">Selecione um tipo de participação primeiro</span>
+                        </p>
+
+                        <!-- Form -->
+                        <form class="space-y-4 mb-8" id="formInscricao">
+                            <!-- Type Selection Hidden -->
+                            <input type="hidden" id="tipoPart" name="tipo">
+                            
+                            <div class="grid md:grid-cols-2 gap-4">
+                                <div class="relative group">
+                                    <input type="text" placeholder="Seu Nome Completo" required class="w-full px-6 py-3 bg-black/50 border border-yellow-600/30 rounded-lg text-white placeholder-gray-500 focus:border-yellow-400 focus:outline-none transition focus:shadow-lg focus:shadow-yellow-500/20 backdrop-blur-sm">
+                                    <div class="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-yellow-400 to-violet-500 rounded-b-lg transform scale-x-0 group-focus-within:scale-x-100 transition-transform duration-300"></div>
+                                </div>
+                                <div class="relative group">
+                                    <input type="email" placeholder="Seu E-mail" required class="w-full px-6 py-3 bg-black/50 border border-yellow-600/30 rounded-lg text-white placeholder-gray-500 focus:border-yellow-400 focus:outline-none transition focus:shadow-lg focus:shadow-yellow-500/20 backdrop-blur-sm">
+                                    <div class="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-yellow-400 to-violet-500 rounded-b-lg transform scale-x-0 group-focus-within:scale-x-100 transition-transform duration-300"></div>
+                                </div>
+                            </div>
+
+                            <div class="grid md:grid-cols-2 gap-4">
+                                <div class="relative group">
+                                    <input type="tel" placeholder="Seu Telefone" class="w-full px-6 py-3 bg-black/50 border border-yellow-600/30 rounded-lg text-white placeholder-gray-500 focus:border-yellow-400 focus:outline-none transition focus:shadow-lg focus:shadow-yellow-500/20 backdrop-blur-sm">
+                                    <div class="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-yellow-400 to-violet-500 rounded-b-lg transform scale-x-0 group-focus-within:scale-x-100 transition-transform duration-300"></div>
+                                </div>
+                                <div class="relative group">
+                                    <input type="text" placeholder="Sua Idade (opcional)" class="w-full px-6 py-3 bg-black/50 border border-yellow-600/30 rounded-lg text-white placeholder-gray-500 focus:border-yellow-400 focus:outline-none transition focus:shadow-lg focus:shadow-yellow-500/20 backdrop-blur-sm">
+                                    <div class="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-yellow-400 to-violet-500 rounded-b-lg transform scale-x-0 group-focus-within:scale-x-100 transition-transform duration-300"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="relative group">
+                                <textarea placeholder="Conte-nos um pouco sobre você e por que está aqui (opcional)" rows="4" class="w-full px-6 py-3 bg-black/50 border border-yellow-600/30 rounded-lg text-white placeholder-gray-500 focus:border-yellow-400 focus:outline-none transition focus:shadow-lg focus:shadow-yellow-500/20 backdrop-blur-sm resize-none"></textarea>
+                                <div class="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-yellow-400 to-violet-500 rounded-b-lg transform scale-x-0 group-focus-within:scale-x-100 transition-transform duration-300"></div>
+                            </div>
+
+                            <!-- Consent -->
+                            <div class="flex items-start gap-3 p-4 bg-yellow-950/20 rounded-lg border border-yellow-700/30">
+                                <input type="checkbox" id="consent" class="w-5 h-5 rounded bg-yellow-600 border-yellow-500 cursor-pointer mt-1" required>
+                                <label for="consent" class="text-gray-300 text-sm cursor-pointer">
+                                    Concordo em receber informações sobre o retiro e futuras edições via e-mail
+                                </label>
+                            </div>
+                            
+                            <button type="submit" class="w-full relative group mt-6" disabled id="submitBtn">
+                                <div class="absolute -inset-1 bg-gradient-to-r from-yellow-400 to-violet-500 rounded-lg blur opacity-75 group-hover:opacity-100 transition duration-500 group-hover:blur-md"></div>
+                                <div class="relative px-8 py-4 bg-gradient-to-r from-yellow-400 to-violet-500 text-black font-bold rounded-lg flex items-center justify-center gap-2 transition-all duration-300 group-hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed">
+                                    <span id="submitText">Selecione um tipo primeiro</span>
+                                    <span class="group-hover:translate-x-1 transition-transform">→</span>
+                                </div>
+                            </button>
+                        </form>
+
+                        <p class="text-gray-500 text-sm text-center">
+                            ✨ Suas informações são seguras. Sem spam. Apenas transformação. 🙏
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black border-t border-yellow-900/20 py-12 relative z-20">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-3 gap-12 mb-12">
+                <div>
+                    <div class="text-2xl font-playfair font-bold bg-gradient-to-r from-yellow-300 to-yellow-600 bg-clip-text text-transparent mb-4">
+                        ALÉM DO ESPELHO
+                    </div>
+                    <p class="text-gray-400">
+                        Uma jornada de cura, identidade e propósito.
+                    </p>
+                </div>
+                <div>
+                    <h3 class="font-bold text-yellow-300 mb-4">Links</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="index.html#sobre" class="hover:text-yellow-300 transition">Sobre</a></li>
+                        <li><a href="edicoes.html" class="hover:text-yellow-300 transition">Edições</a></li>
+                        <li><a href="inscricao.html" class="hover:text-yellow-300 transition">Inscrição</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-bold text-yellow-300 mb-4">Contato</h3>
+                    <p class="text-gray-400 mb-2">Email: contato@alemdoespelho.com</p>
+                    <p class="text-gray-400">Redes Sociais: @alemdoespelho</p>
+                </div>
+            </div>
+            <div class="border-t border-yellow-900/20 pt-8 text-center text-gray-500 text-sm">
+                <p>&copy; 2025 Além do Espelho - Inscrição. Todos os direitos reservados. ✨</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- AOS Script -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Custom JavaScript -->
+    <script src="js/main.js"></script>
+    <!-- PagBank Integration -->
+    <script src="js/pagamento.js" type="module"></script>
+    
+    <!-- Inscription Script -->
+    <script>
+        const API_BASE_URL = 'http://localhost:3000/api';
+        let tipoSelecionado = null;
+
+        function selectType(type) {
+            tipoSelecionado = type;
+            const tipoPart = document.getElementById('tipoPart');
+            const tipoSelecionadoSpan = document.getElementById('tipoSelecionado');
+            const submitBtn = document.getElementById('submitBtn');
+            const submitText = document.getElementById('submitText');
+
+            tipoPart.value = type;
+
+            // Update display
+            if (type === 'acapante') {
+                tipoSelecionadoSpan.textContent = '✓ Você selecionou: Acapante (Aprendizado Profundo)';
+                submitText.textContent = 'Finalizar Inscrição como Acapante';
+                submitBtn.disabled = false;
+            } else {
+                tipoSelecionadoSpan.textContent = '✓ Você selecionou: Equipante (Apoio e Suporte)';
+                submitText.textContent = 'Finalizar Inscrição como Equipante';
+                submitBtn.disabled = false;
+            }
+
+            // Scroll to form
+            setTimeout(() => {
+                document.getElementById('formulario').scrollIntoView({ behavior: 'smooth' });
+            }, 300);
+        }
+
+        // Form submission with Payment Integration
+        document.getElementById('formInscricao').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            if (!tipoSelecionado) {
+                alert('Por favor, selecione um tipo de participação');
+                return;
+            }
+
+            // Coletar dados do formulário
+            const formElements = this.elements;
+            const dados = {
+                nome: formElements[1].value,
+                email: formElements[2].value,
+                telefone: formElements[3].value,
+                idade: formElements[4].value,
+                mensagem: formElements[5].value,
+                tipo: tipoSelecionado
+            };
+
+            // Validar campos obrigatórios
+            if (!dados.nome || !dados.email) {
+                alert('Nome e e-mail são obrigatórios!');
+                return;
+            }
+
+            // Mostrar loading
+            const submitBtn = document.getElementById('submitBtn');
+            const originalText = submitBtn.querySelector('span').textContent;
+            submitBtn.disabled = true;
+            submitBtn.querySelector('span').textContent = '⏳ Processando...';
+
+            try {
+                // Enviar inscrição e gerar pagamento
+                const response = await fetch(`${API_BASE_URL}/inscricoes`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(dados)
+                });
+
+                const resultado = await response.json();
+
+                if (!resultado.success) {
+                    throw new Error(resultado.message || 'Erro ao processar inscrição');
+                }
+
+                // Sucesso! Mostrar tela de confirmação com link de pagamento
+                mostrarTelaConfirmacao(resultado.data, dados);
+
+            } catch (erro) {
+                console.error('Erro:', erro);
+                alert('❌ Erro: ' + erro.message);
+                submitBtn.disabled = false;
+                submitBtn.querySelector('span').textContent = originalText;
+            }
+        });
+
+        // Mostrar tela de confirmação com link de pagamento
+        function mostrarTelaConfirmacao(dados, dadosForm) {
+            const formulario = document.getElementById('formInscricao');
+            const container = formulario.parentElement;
+            const valor = tipoSelecionado === 'acapante' ? '299,90' : '199,90';
+
+            const html = `
+                <div class="relative" data-aos="zoom-in">
+                    <div class="absolute -inset-1 bg-gradient-to-r from-green-600 via-green-500 to-green-600 rounded-2xl blur-2xl opacity-40 animate-pulse"></div>
+                    
+                    <div class="relative bg-gradient-to-br from-slate-900 via-black to-slate-950 border-2 border-green-500/50 rounded-2xl p-8 md:p-16 backdrop-blur-xl text-center">
+                        <div class="text-6xl mb-6 animate-bounce">✅</div>
+                        
+                        <h2 class="font-playfair text-4xl md:text-5xl font-bold mb-4 leading-tight">
+                            <span class="block text-white mb-2">Inscrição Criada!</span>
+                            <span class="block bg-gradient-to-r from-green-300 via-green-400 to-green-600 bg-clip-text text-transparent">Proceda com o Pagamento</span>
+                        </h2>
+                        
+                        <p class="text-gray-300 text-lg md:text-xl mb-8 leading-relaxed max-w-2xl mx-auto">
+                            Sua inscrição foi registrada com sucesso! Agora finalize o pagamento para confirmar sua participação no retiro.
+                        </p>
+
+                        <div class="bg-gradient-to-r from-yellow-950/40 to-black border-l-4 border-yellow-500 p-6 md:p-8 rounded-lg backdrop-blur-sm mb-8 text-left">
+                            <p class="text-yellow-100 font-semibold mb-4">📋 Detalhes da Inscrição:</p>
+                            <div class="space-y-2 text-gray-300 text-sm">
+                                <p>👤 <strong>Nome:</strong> ${dadosForm.nome}</p>
+                                <p>📧 <strong>E-mail:</strong> ${dadosForm.email}</p>
+                                <p>💰 <strong>Valor:</strong> <span class="text-yellow-400 font-bold">R$ ${valor}</span></p>
+                                <p>📝 <strong>Tipo:</strong> ${tipoSelecionado === 'acapante' ? '🎓 Acapante' : '🤝 Equipante'}</p>
+                                <p>🔐 <strong>Ref.:</strong> ${dados.inscricaoId.substring(0, 12)}...</p>
+                            </div>
+                        </div>
+
+                        <div class="space-y-4 mb-8">
+                            ${dados.pagamento.linkPagamento ? `
+                                <a href="${dados.pagamento.linkPagamento}" target="_blank" class="inline-block group relative px-8 py-4 bg-gradient-to-r from-green-500 to-green-600 text-white font-bold rounded-lg overflow-hidden transition-all duration-300 hover:shadow-2xl hover:shadow-green-500/50 transform hover:scale-105">
+                                    <span class="relative z-10">💳 Realizar Pagamento via PagBank</span>
+                                    <div class="absolute inset-0 bg-white/20 transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
+                                </a>
+                            ` : `
+                                <div class="p-4 bg-red-950/40 border border-red-700/50 rounded-lg">
+                                    <p class="text-red-200">⚠️ Link de pagamento indisponível no momento. Tente novamente.</p>
+                                </div>
+                            `}
+                        </div>
+
+                        <div class="mt-8 p-4 bg-yellow-950/20 border border-yellow-700/30 rounded-lg">
+                            <p class="text-gray-300 text-sm">
+                                ⏰ <strong>Validade:</strong> O link de pagamento está válido por 24 horas<br>
+                                📧 Confirmaremos seu pagamento e enviaremos um e-mail de confirmação<br>
+                                🔄 Qualquer dúvida, entre em contato conosco
+                            </p>
+                        </div>
+
+                        <div class="mt-8 space-y-2">
+                            <a href="index.html" class="inline-block group relative px-6 py-3 bg-gradient-to-r from-yellow-400 to-yellow-500 text-black font-bold rounded-lg overflow-hidden transition-all duration-300 hover:scale-105">
+                                <span class="relative z-10">← Voltar ao Início</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            `;
+
+            // Remover formulário e mostrar confirmação
+            formulario.style.display = 'none';
+            container.innerHTML = html;
+        }
+    </script>
+</body>
+</html>

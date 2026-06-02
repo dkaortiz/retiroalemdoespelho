@@ -109,8 +109,8 @@
     background: linear-gradient(
         90deg,
         #ffffff 0%,
-        #fbbf24 20%,
-        #fbbf24 80%,
+        #ffd700 20%,
+        #ffd700 80%,
         #ffffff 100%
     );
     background-size: 1000px 100%;
@@ -161,11 +161,11 @@
 @keyframes pulse-glow {
     0%, 100% {
         opacity: 0.6;
-        box-shadow: 0 0 10px rgba(251, 191, 36, 0.3);
+        box-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
     }
     50% {
         opacity: 1;
-        box-shadow: 0 0 20px rgba(251, 191, 36, 0.6);
+        box-shadow: 0 0 20px rgba(255, 215, 0, 0.6);
     }
 }
 
@@ -193,8 +193,8 @@
 }
 
 .hover-glow:hover {
-    box-shadow: 0 0 20px rgba(251, 191, 36, 0.5), inset 0 0 20px rgba(251, 191, 36, 0.1);
-    border-color: rgba(251, 191, 36, 0.8);
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.5), inset 0 0 20px rgba(255, 215, 0, 0.1);
+    border-color: rgba(255, 215, 0, 0.8);
 }
 
 /* ============================================================
@@ -216,12 +216,12 @@ html {
 }
 
 ::-webkit-scrollbar-thumb {
-    background: linear-gradient(180deg, #fbbf24 0%, #d97706 100%);
+    background: linear-gradient(180deg, #ffd700 0%, #ffb700 100%);
     border-radius: 5px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: linear-gradient(180deg, #f59e0b 0%, #b45309 100%);
+    background: linear-gradient(180deg, #ffe700 0%, #ffd700 100%);
 }
 
 /* ============================================================
@@ -230,7 +230,7 @@ html {
 
 /* Gradient text effect */
 .gradient-text {
-    background: linear-gradient(135deg, #fbbf24 0%, #d97706 100%);
+    background: linear-gradient(135deg, #ffd700 0%, #ffb700 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -298,7 +298,7 @@ button:hover::before {
     border: 2px solid transparent;
     background-image: 
         linear-gradient(black, black),
-        linear-gradient(135deg, #fbbf24 0%, #d97706 100%);
+        linear-gradient(135deg, #ffd700 0%, #ffb700 100%);
     background-origin: border-box;
     background-clip: padding-box, border-box;
 }
@@ -386,17 +386,150 @@ textarea:focus::placeholder {
 /* Border glow animation */
 @keyframes border-glow {
     0%, 100% {
-        border-color: rgba(251, 191, 36, 0.3);
-        box-shadow: 0 0 10px rgba(251, 191, 36, 0.1);
+        border-color: rgba(255, 215, 0, 0.3);
+        box-shadow: 0 0 10px rgba(255, 215, 0, 0.1);
     }
     50% {
-        border-color: rgba(251, 191, 36, 0.8);
-        box-shadow: 0 0 30px rgba(251, 191, 36, 0.3);
+        border-color: rgba(255, 215, 0, 0.8);
+        box-shadow: 0 0 30px rgba(255, 215, 0, 0.3);
     }
 }
 
 .animate-border-glow {
     animation: border-glow 2s ease-in-out infinite;
+}
+
+/* ============================================================
+   ENHANCED PAGE STYLES
+   ============================================================ */
+
+/* Improved link styling */
+a {
+    transition: all 0.3s ease;
+}
+
+/* Card elevation on hover */
+.card-hover {
+    transform: translateZ(0);
+}
+
+.card-hover:hover {
+    transform: translateY(-20px);
+}
+
+/* Input field enhancements */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+    transition: all 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+textarea:focus {
+    transform: scale(1.02);
+}
+
+/* Checkbox custom styling */
+input[type="checkbox"] {
+    accent-color: #ffd700;
+}
+
+/* Button disabled state */
+button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+button:not(:disabled):hover {
+    transform: scale(1.05);
+}
+
+/* Section transitions */
+section {
+    scroll-behavior: smooth;
+}
+
+/* ============================================================
+   TYPE CARD STYLES FOR INSCRIPTION
+   ============================================================ */
+
+/* Acapante card specific styles */
+.group:has(> div > .from-blue-600) {
+    --card-color: rgb(59, 130, 246);
+}
+
+/* Equipante card specific styles */
+.group:has(> div > .from-purple-600) {
+    --card-color: rgb(147, 51, 234);
+}
+
+/* ============================================================
+   FORM ENHANCEMENTS
+   ============================================================ */
+
+/* Success message animation */
+@keyframes success-animation {
+    0% {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.animate-success {
+    animation: success-animation 0.5s ease-out;
+}
+
+/* ============================================================
+   NAVIGATION TRANSITIONS
+   ============================================================ */
+
+nav {
+    transition: all 0.3s ease;
+}
+
+nav.shadow-lg {
+    box-shadow: 0 10px 30px rgba(251, 191, 36, 0.1);
+}
+
+/* Mobile menu smooth transition */
+#mobileMenu {
+    animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#mobileMenu.hidden {
+    animation: slideUp 0.3s ease-out;
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
 }
 
 /* Parallax effect setup */
